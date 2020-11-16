@@ -81,7 +81,7 @@ let superagent=require('superagent')
             
           <label for="DELETE">DELETE  <input type="radio" id="DELETE" name="method" onChange={this.handleChangeRadio} value="DELETE"></input></label>
       
-          <button data-testid="button" type="submit" onClick={this.handleClick}>GO!  <p data-testid="output" >{this.props.method}</p></button>
+          <button data-testid="button" type="submit" onClick={this.handleClick}>GO! </button>
    
       </form >
       </main>

@@ -1,4 +1,4 @@
-// import { render, screen, fireEvent } from '@testing-library/react';
+import { screen, fireEvent ,waitFor} from '@testing-library/react';
 import App from '../App';
 import Form  from '../Form';
 import Results from '../Results';
@@ -61,7 +61,7 @@ test('renders learn react link', () => {
   expect(container.querySelector('[data-testid="button"]').textContent).toBe("GO!  ");
 
   // get ahold of the button element, and trigger some clicks on it
-  const button = document.querySelector('[data-testid="button"]');
+  // const button = document.querySelector('[data-testid="button"]');
   // expect(button.innerHTML).toBe("Turn on");
   // act(() => {
   //   button.dispatchEvent(new MouseEvent("click", { bubbles: true }));
@@ -80,11 +80,12 @@ test('renders learn react link', () => {
 //   expect(items).toHaveLength(3);
 // });
 
-// test('work as expected', () => {
-//   render(<Form />);
-//   // screen.debug();
-//   const button = screen.getByTestId('button');
-//   fireEvent.submit(button);
-//   console.log( expect(screen.getByTestId('output')))
-//   expect(screen.getByTestId('output')).toBeCalled();
-// });
+test('work as expected', async() => {
+  render(<App />);
+  // screen.debug();
+  const button = screen.getByTestId('button');
+  fireEvent.submit(button, { target: { url: { value: 'https://jsonplaceholder.typicode.com/users' }, method: { value: 'GET' } } });
+  // console.log( expect(screen.getByTestId('output')))
+  const results = await waitFor(() => screen.getByTestId('output'));
+  expect(results).toBeCalled();
+});
