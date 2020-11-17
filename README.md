@@ -1,4 +1,4 @@
-LAB - 9
+LAB - 28
 
 
 Author: bayan alalem
@@ -21,14 +21,17 @@ Use it’s own .scss file for styling
 Accept user input for a URL and store it in state
 Allow the user to choose a method and store it in state
 This can be done with radio buttons or clickable elements
-pass the value to app.js .
+pass the value to app.js .and create locale storge and 
+push the method and url and the data
 
 ### results.js and  header.js 
 Use it’s own .scss file for styling
 and add some of text 
 git all the data from app 
 and render them 
-
+## history.js 
+get the data from the local storge 
+ and render it and get the data
 ## Running the app
 
 `npm start`
@@ -41,4 +44,4 @@ test
 
 
 UML Diagram
-![](lab27url.PNG)
+![](lab28url.PNG)
