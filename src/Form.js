@@ -153,6 +153,16 @@ class Form extends React.Component {
 
 		//  });
 	};
+	componentDidMount() {
+		if (this.props.user !== undefined) {
+			const url34 = document.getElementById('url');
+			console.log('doc', url34);
+			url34.value = this.props.user.url;
+			console.log('cc', `${this.props.user.method}`);
+			const radiobtn = document.getElementById(`${this.props.user.method}`);
+			radiobtn.checked = true;
+		}
+	}
 	render() {
 		return (
 			<main>
