@@ -13,9 +13,9 @@ export default function Results({ count, results, header, body }) {
 					<p data-testid="output">{body}</p>
 				</Then>
 				<Else>
-					<p>
+					<span>
 						response:<ReactJson name="response" src={results} theme="monokai" />
-					</p>
+					</span>
 				</Else>
 			</If>
 		</div>

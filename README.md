@@ -1,4 +1,4 @@
-LAB - 28
+LAB - 29
 
 
 Author: bayan alalem
@@ -32,6 +32,9 @@ and render them
 ## history.js 
 get the data from the local storge 
  and render it and get the data
+## help.js 
+to add to explan why we create this app 
+
 ## Running the app
 
 `npm start`
@@ -44,4 +47,4 @@ test
 
 
 UML Diagram
-![](lab28url.PNG)
+![](lab29url.PNG)
