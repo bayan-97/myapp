@@ -161,6 +161,8 @@ class Form extends React.Component {
 			console.log('cc', `${this.props.user.method}`);
 			const radiobtn = document.getElementById(`${this.props.user.method}`);
 			radiobtn.checked = true;
+			const button = document.getElementById('btn');
+			button.click();
 		}
 	}
 	render() {
